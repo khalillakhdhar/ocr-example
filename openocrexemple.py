@@ -19,8 +19,9 @@ while cap.isOpened():
         
         
         result = reader.readtext(IMAGE_PATH,paragraph="False")
-        text = result[0][1]
-        print(text)
+        if(result):
+            text = result[0][1]
+            print(text)
         #count = count + 1
         if cv2.waitKey(10) & 0xFF == ord('q'):
             break
